@@ -22,4 +22,6 @@ x = st.slider("X 값을 선택", 0, 100, 50)
 st.write(f"선택한 값: {x}")
 
 semina_df = pd.read_csv("joojong.csv")
+semina_df.set_index("연도",inplace=True)
 st.line_chart(semina_df)
+st.write("호.호")
