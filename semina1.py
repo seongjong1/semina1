@@ -16,3 +16,4 @@ st.pyplot(fig)
 
 st.write("과연 되나22222")
 st.write("real ok")
+st.write("JJIN MAK")
