@@ -44,7 +44,6 @@ rich==13.9.1
 rpds-py==0.20.0
 s3transfer==0.10.2
 seaborn==0.13.2
-six==1.16.0
 smmap==5.0.1
 streamlit==1.39.0
 tenacity==9.0.0
@@ -54,3 +53,7 @@ typing_extensions==4.12.2
 tzdata==2024.2
 urllib3==1.26.20
 zipp==3.20.2
+
+#추가 패키지
+setuptools
+wheel
