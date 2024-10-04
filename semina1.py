@@ -15,3 +15,4 @@ ax.plot([x],[y],marker="o")
 st.pyplot(fig)
 
 st.write("과연 되나22222")
+st.write("real ok")
