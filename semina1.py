@@ -21,5 +21,5 @@ import pandas as pd
 x = st.slider("X 값을 선택", 0, 100, 50)
 st.write(f"선택한 값: {x}")
 
-semina_df = pd.read_csv("sool_panmae.csv")
+semina_df = pd.read_csv("joojong.csv")
 st.line_chart(semina_df)
