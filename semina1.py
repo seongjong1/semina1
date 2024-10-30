@@ -3,8 +3,8 @@ import pandas as pd
 
 # 사이드바에 "자료1" 버튼 추가
 st.sidebar.title("자료 선택")
-show_tabs = st.sidebar.click("자료1")  # 자료1 버튼 추가
-show_tabs2 = st.sidebar.click("자료2")
+show_tabs = st.sidebar.button("자료1")  # 자료1 버튼 추가
+show_tabs2 = st.sidebar.button("자료2")
 
 # "자료1" 버튼이 눌렸을 때만 모든 탭을 표시
 # 탭 생성
