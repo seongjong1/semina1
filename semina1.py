@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-# 사이드바에 "자료1" 버튼 추가
+# 사이드바에 "자료1"과 "자료2" 버튼 추가 및 클릭 상태를 session_state에 저장
 st.sidebar.title("자료 선택")
 if "show_tabs" not in st.session_state:
     st.session_state.show_tabs = False  # 초기화
@@ -10,11 +10,13 @@ if "show_tabs" not in st.session_state:
 if st.sidebar.button("자료1"):
     st.session_state.show_tabs = True
 
+# "자료2" 버튼 클릭 시 상태를 False로 변경하고, 자료2 내용 표시
 if st.sidebar.button("자료2"):
     st.session_state.show_tabs = False
 
 # "자료1"이 선택되었을 때만 모든 탭을 표시
 if st.session_state.show_tabs:
+    # 자료1의 내용 (기존 탭 코드)
     tab1, tab2, tab3, tab4 = st.tabs(["입력 위젯 및 출력 컴포넌트", "Data Frame 시각화", "session_state 활성", "session_state 비활성화"])
 
     with tab1:
@@ -61,3 +63,18 @@ if st.session_state.show_tabs:
 
         st.write(f"현재 카운트: {count}")
 
+# "자료2"가 선택되었을 때만 3개의 컬럼 레이아웃 표시
+else:
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.header("컬럼 1")
+        st.write("여기는 첫 번째 컬럼입니다.")
+
+    with col2:
+        st.header("컬럼 2")
+        st.write("여기는 두 번째 컬럼입니다.")
+
+    with col3:
+        st.header("컬럼 3")
+        st.write("여기는 세 번째 컬럼입니다.")
