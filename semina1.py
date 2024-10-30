@@ -12,7 +12,7 @@ with tab1:
         date = st.date_input("날짜를 선택하세요:")
         # 제출 버튼 추가
         submitted = st.form_submit_button("제출")
-        st.write("입력한 정보:")
+        st.write("신상 정보:")
         st.write(f"이름: {name}")
         st.write(f"나이: {age}")
         st.write(f"성별: {gender}")
@@ -20,9 +20,6 @@ with tab1:
         st.write(f"날짜: {date}")
 with tab2:
     # 세션 상태에 semina_df가 없는 경우에만 데이터 로드 및 저장
-    x = st.slider("X 값을 선택", 0, 100, 50)
-    st.write(f"선택한 값: {x}")
-
     semina_df = pd.read_csv("joojong.csv")
     semina_df.set_index("연도", inplace=True)
     st.line_chart(semina_df)
