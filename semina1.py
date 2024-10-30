@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-tab1, tab2, tab3, tab4 = st.tabs(["입력위젯 및 출력컴포넌트", "semina2", "semian3"])
+tab1, tab2, tab3 = st.tabs(["입력위젯 및 출력컴포넌트", "semina2", "semian3"])
 
 with tab1:
     with st.form("입력 위젯"):
