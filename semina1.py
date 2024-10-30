@@ -81,3 +81,4 @@ else:
         st.header("컬럼 3")
         st.write("여기는 세 번째 분활 화면 입니다")
         st.line_chart(semina_df)
+    st.write("삭제")
