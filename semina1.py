@@ -61,6 +61,3 @@ if st.session_state.show_tabs:
 
         st.write(f"현재 카운트: {count}")
 
-
-if show_tabs2:
-    st.write("zzzz")
