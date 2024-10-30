@@ -3,12 +3,18 @@ import pandas as pd
 
 # 사이드바에 "자료1" 버튼 추가
 st.sidebar.title("자료 선택")
-show_tabs = st.sidebar.button("자료1")  # 자료1 버튼 추가
-show_tabs2 = st.sidebar.button("자료2")
+if "show_tabs" not in st.session_state:
+    st.session_state.show_tabs = False  # 초기화
 
-# "자료1" 버튼이 눌렸을 때만 모든 탭을 표시
-# 탭 생성
-if show_tabs:
+# "자료1" 버튼 클릭 시 상태를 True로 변경
+if st.sidebar.button("자료1"):
+    st.session_state.show_tabs = True
+
+if st.sidebar.button("자료2"):
+    st.session_state.show_tabs = False
+
+# "자료1"이 선택되었을 때만 모든 탭을 표시
+if st.session_state.show_tabs:
     tab1, tab2, tab3, tab4 = st.tabs(["입력 위젯 및 출력 컴포넌트", "Data Frame 시각화", "session_state 활성", "session_state 비활성화"])
 
     with tab1:
