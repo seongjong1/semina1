@@ -70,11 +70,14 @@ else:
     with col1:
         st.header("컬럼 1")
         st.write("여기는 첫 번째 분활 화면 입니다.")
+        st.write("한국건강증진개발원_절주(알코올 생산과 소비)_주요 주류 출고현황(국내분)")
 
     with col2:
         st.header("컬럼 2")
         st.write("여기는 두 번째 분활 화면 입니다")
+        st.dataframe(semina_df)
 
     with col3:
         st.header("컬럼 3")
         st.write("여기는 세 번째 분활 화면 입니다")
+        st.line_chart(semina_df)
