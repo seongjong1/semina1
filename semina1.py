@@ -66,7 +66,7 @@ if st.session_state.show_tabs:
 # "자료2"가 선택되었을 때만 3개의 컬럼 레이아웃 표시
 else:
     col1, col2, col3 = st.columns(3)
-
+    semina_df = pd.read_csv("joojong.csv")
     with col1:
         st.header("컬럼 1")
         st.write("여기는 첫 번째 분활 화면 입니다.")
