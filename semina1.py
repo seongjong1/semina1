@@ -39,7 +39,7 @@ if st.session_state.show_tabs:
 
     with tab2:
         st.header("Data Frame 시각화")
-        semina_df = pd.read_csv("../../../semina1/semina1/joojong.csv")
+        semina_df = pd.read_csv("joojong.csv")
         semina_df.set_index("연도", inplace=True)
         st.write("한국건강증진개발원_절주(알코올 생산과 소비)_주요 주류 출고현황(국내분)")
         st.dataframe(semina_df)
@@ -66,7 +66,7 @@ if st.session_state.show_tabs:
 # "자료2"가 선택되었을 때만 3개의 컬럼 레이아웃 표시
 else:
     col1, col2, col3 = st.columns(3)
-    semina_df = pd.read_csv("../../../semina1/semina1/joojong.csv")
+    semina_df = pd.read_csv("joojong.csv")
     with col1:
         st.header("컬럼 1")
         st.write("여기는 첫 번째 분활 화면 입니다.")
