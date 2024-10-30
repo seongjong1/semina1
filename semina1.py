@@ -22,6 +22,7 @@ with tab2:
     # 세션 상태에 semina_df가 없는 경우에만 데이터 로드 및 저장
     semina_df = pd.read_csv("joojong.csv")
     semina_df.set_index("연도", inplace=True)
+    st.write("한국건강증진개발원_절주(알코올 생산과 소비)_주요 주류 출고현황(국내분)")
     st.dataframe(semina_df)
     st.line_chart(semina_df)
 
