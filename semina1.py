@@ -17,14 +17,14 @@ with tab2:
     if 'count' not in st.session_state:
         st.session_state.count = 0  # 초기화
 
-    if st.button("카운트 증가"):
+    if st.button("카운트 증가", key="button1"):
         st.session_state.count += 1
 
     st.write(f"현재 카운트: {st.session_state.count}")
 
 with tab3:
     count = 0
-    if st.button("카운트 증가"):
+    if st.button("카운트 증가", key="button2"):
         count += 1
 
     st.write(f"현재 카운트: {count}")
