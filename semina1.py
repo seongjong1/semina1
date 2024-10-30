@@ -22,6 +22,7 @@ with tab2:
     # 세션 상태에 semina_df가 없는 경우에만 데이터 로드 및 저장
     semina_df = pd.read_csv("joojong.csv")
     semina_df.set_index("연도", inplace=True)
+    st.dataframe(semina_df)
     st.line_chart(semina_df)
 
 with tab3:
