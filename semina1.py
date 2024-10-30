@@ -1,9 +1,7 @@
 import streamlit as st
-import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 
-tab1,tab2 = st.tabs(["semina1", "semina2"])
+abs(["semina1", "semina2"])
 
 with tab1:
     # 세션 상태에 semina_df가 없는 경우에만 데이터 로드 및 저장
@@ -23,5 +21,4 @@ with tab2:
         st.session_state.count += 1
 
     st.write(f"현재 카운트: {st.session_state.count}")
-
 
