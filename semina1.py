@@ -1,14 +1,15 @@
 import streamlit as st
 import pandas as pd
 
-# 사이드바에 네비게이션 추가
-page = st.sidebar.radio("자료 선택", ["자료1", "Data Frame 시각화", "session_state 활성", "session_state 비활성화"])
+# 사이드바에 "자료1" 버튼 추가
+st.sidebar.title("자료 선택")
+show_tabs = st.sidebar.button("자료1")  # 자료1 버튼 추가
 
-# 탭 생성
-tab1, tab2, tab3, tab4 = st.tabs(["입력 위젯 및 출력 컴포넌트", "Data Frame 시각화", "session_state 활성", "session_state 비활성화"])
+# "자료1" 버튼이 눌렸을 때만 모든 탭을 표시
+if show_tabs:
+    # 탭 생성
+    tab1, tab2, tab3, tab4 = st.tabs(["입력 위젯 및 출력 컴포넌트", "Data Frame 시각화", "session_state 활성", "session_state 비활성화"])
 
-# 사이드바에서 "자료1"을 선택했을 때만 tab1의 내용을 표시
-if page == "자료1":
     with tab1:
         st.header("입력 위젯 및 출력 컴포넌트")
         with st.form("입력 위젯"):
@@ -27,8 +28,6 @@ if page == "자료1":
                 st.write(f"점수: {score}")
                 st.write(f"날짜: {date}")
 
-# 사이드바에서 "Data Frame 시각화"를 선택했을 때만 tab2의 내용을 표시
-elif page == "Data Frame 시각화":
     with tab2:
         st.header("Data Frame 시각화")
         semina_df = pd.read_csv("joojong.csv")
@@ -37,8 +36,6 @@ elif page == "Data Frame 시각화":
         st.dataframe(semina_df)
         st.line_chart(semina_df)
 
-# 사이드바에서 "session_state 활성"을 선택했을 때만 tab3의 내용을 표시
-elif page == "session_state 활성":
     with tab3:
         st.header("session_state 활성")
         if 'count' not in st.session_state:
@@ -49,8 +46,6 @@ elif page == "session_state 활성":
 
         st.write(f"현재 카운트: {st.session_state.count}")
 
-# 사이드바에서 "session_state 비활성화"를 선택했을 때만 tab4의 내용을 표시
-elif page == "session_state 비활성화":
     with tab4:
         st.header("session_state 비활성화")
         count = 0
