@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-abs(["semina1", "semina2"])
+tab1, tab2 = st.tabs(["semina1", "semina2"])
 
 with tab1:
     # 세션 상태에 semina_df가 없는 경우에만 데이터 로드 및 저장
