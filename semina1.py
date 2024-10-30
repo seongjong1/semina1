@@ -10,7 +10,8 @@ with tab1:
         gender = st.selectbox("성별을 입력하세요", ["남성","여성"])
         score = st.slider("점수를 선택하세요",0,100)
         date = st.date_input("날짜를 선택하세요:")
-    with st.form("출력 컴포넌트"):
+        # 제출 버튼 추가
+        submitted = st.form_submit_button("제출")
         st.write("입력한 정보:")
         st.write(f"이름: {name}")
         st.write(f"나이: {age}")
