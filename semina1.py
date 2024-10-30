@@ -65,7 +65,7 @@ if st.session_state.show_tabs:
 
 # "자료2"가 선택되었을 때만 3개의 컬럼 레이아웃 표시
 else:
-    col1, col2, col3, col4, col5, col6 = st.columns(6)
+    col1, col2, col3 = st.columns(3)
 
     with col1:
         st.header("컬럼 1")
@@ -78,15 +78,3 @@ else:
     with col3:
         st.header("컬럼 3")
         st.write("여기는 세 번째 분활 화면 입니다")
-
-    with col4:
-        st.header("컬럼 4")
-        st.write("여기는 네 번째 분활 화면 입니다")
-
-    with col5:
-        st.header("컬럼 5")
-        st.write("여기는 다섯 번째 분활 화면 입니다")
-
-    with col6:
-        st.header("컬럼 6")
-        st.write("여기는 여섯 번째 분활 화면 입니다")
